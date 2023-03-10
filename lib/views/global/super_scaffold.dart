@@ -13,13 +13,14 @@ class SuperScaffold extends StatefulWidget{
   final Color systemNavigationBarColor;
   final Color backgroundColor;
   final AppBar? appBar;
+  final Drawer? drawer;
   final bool resizeToAvoidBottomInset;
   final FloatingActionButton? floatingActionButton;
   final Brightness statusBarBrightness;
   final Brightness statusIconBrightness;
   final VoidCallback? onWillPop;
   final bool isWillPop;
-  const SuperScaffold({Key? key,required this.body,this.floatingActionButton, this.statusBarColor = Colors.white,this.systemNavigationBarColor = Colors.white,this.backgroundColor=Colors.white,this.appBar,this.isNavigationBarSafe=true,this.isStatusBarSafe=true,this.resizeToAvoidBottomInset=true, this.statusBarBrightness = Brightness.light,this.statusIconBrightness=Brightness.dark,this.onWillPop,this.isWillPop=true}) : super(key: key);
+  const SuperScaffold({Key? key,required this.body,this.floatingActionButton, this.statusBarColor = Colors.white,this.systemNavigationBarColor = Colors.white,this.backgroundColor=Colors.white,this.appBar,this.drawer,this.isNavigationBarSafe=true,this.isStatusBarSafe=true,this.resizeToAvoidBottomInset=true, this.statusBarBrightness = Brightness.light,this.statusIconBrightness=Brightness.dark,this.onWillPop,this.isWillPop=true}) : super(key: key);
 
   @override
   State<SuperScaffold> createState() => _SuperScaffoldState();
@@ -74,6 +75,7 @@ class _SuperScaffoldState extends State<SuperScaffold> with RouteAware {
         },
         child: Scaffold(
           appBar: widget.appBar,
+          drawer: widget.drawer,
           backgroundColor: widget.backgroundColor,
           floatingActionButton: widget.floatingActionButton,
           resizeToAvoidBottomInset:widget.resizeToAvoidBottomInset,
@@ -134,17 +136,6 @@ class _SuperScaffoldState extends State<SuperScaffold> with RouteAware {
 }
 
 
-class GG extends StatelessWidget {
-  const GG({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body:Container()
-
-    );
-  }
-}
 
 
 

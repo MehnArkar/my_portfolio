@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:my_portfolio/utils/constants/app_colors.dart';
 import 'package:my_portfolio/utils/constants/app_constants.dart';
 import 'package:my_portfolio/views/global/super_scaffold.dart';
+import 'package:my_portfolio/views/home/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,9 +39,7 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SuperScaffold(
-      body: Container(),
-    );
+    return const HomePage();
   }
 }
 
