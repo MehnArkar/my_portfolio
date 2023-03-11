@@ -13,7 +13,7 @@ class SuperScaffold extends StatefulWidget{
   final Color systemNavigationBarColor;
   final Color backgroundColor;
   final AppBar? appBar;
-  final Drawer? drawer;
+  final Widget? drawer;
   final bool resizeToAvoidBottomInset;
   final FloatingActionButton? floatingActionButton;
   final Brightness statusBarBrightness;
